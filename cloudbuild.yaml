@@ -1,0 +1,15 @@
+ name: gcr.io/cloud-builders/gcloud
+  id: create-test-vm
+  args:
+      - compute
+      - instances
+      - create
+      - cloudbuild-vm-priya
+      - --project=searce-playground-v1
+      - --zone=asia-south1-a 
+      - --machine-type=e2-medium
+      - --network=priya-vpc
+      - --subnet=sheetal-public-subnet
+      - --service-account=mrunal@searce-playground-v1.iam.gserviceaccount.com
+      - --tags=allowiap
+      - --labels=owner=priya

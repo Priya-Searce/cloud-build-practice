@@ -1,14 +1,14 @@
 steps:
-# VM Creation
+# Instance Template Creation
 - name: gcr.io/cloud-builders/gcloud
-  id: create-test-vm
-  args:
+  id: create-instance-template
+  Args:
       - compute
-      - instances
+      - instance
+      - templates
       - create
-      - cloudbuild-vm-priya
+      - cloudbuild-priya-template
       - --project=searce-playground-v1
-      - --zone=asia-south1-a 
       - --machine-type=e2-medium
       - --network=priya-vpc
       - --subnet=sheetal-public-subnet

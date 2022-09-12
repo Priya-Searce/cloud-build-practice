@@ -2,7 +2,7 @@ steps:
 # Instance Template Creation
 - name: gcr.io/cloud-builders/gcloud
   id: create-instance-template
-  Args:
+  args:
       - compute
       - instance
       - templates

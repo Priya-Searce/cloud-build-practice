@@ -2,16 +2,12 @@ steps:
 # Instance Template Creation
 - name: gcr.io/cloud-builders/gcloud
   id: create-instance-template
-  args:
+  Args:
       - compute
       - instance
       - templates
       - create
       - cloudbuild-priya-template
       - --project=searce-playground-v1
-      - --machine-type=e2-medium
-      - --network=priya-vpc
-      - --subnet=sheetal-public-subnet
-      - --service-account=mrunal@searce-playground-v1.iam.gserviceaccount.com
-      - --tags=allowiap
-      - --labels=owner=priya
+      - --source-instance=sheetal-test-vm
+      - --source-instance-zone=asia-south1-a
